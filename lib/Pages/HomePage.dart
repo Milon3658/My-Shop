@@ -2,7 +2,7 @@ import 'package:ebuy/Pages/Cart.dart';
 import 'package:ebuy/Pages/CategoriesPage.dart';
 import 'package:ebuy/Pages/FavoritePage.dart';
 import 'package:ebuy/Pages/ProductDetails.dart';
-import 'package:ebuy/Pages/ProfilePage.dart';
+import 'package:ebuy/Pages/Profile/ProfilePage.dart';
 import 'package:ebuy/Widgets/RecentProducts.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -113,7 +113,7 @@ class _MainPageState extends State<MainPage> {
           actions: [
              InkWell(
                onTap: (){
-                 Get.to(AddCart());
+                 Get.to(const AddCart());
                },
                child: const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
@@ -159,7 +159,7 @@ class _MainPageState extends State<MainPage> {
                       initialPage: 0,
                       enableInfiniteScroll: true,
                       reverse: false,
-                      // autoPlay: true,
+                      autoPlay: true,
                       // autoPlayInterval: Duration(seconds: 3),
                       autoPlayAnimationDuration:
                           const Duration(milliseconds: 800),
@@ -182,7 +182,8 @@ class _MainPageState extends State<MainPage> {
                   color: Colors.black,
                   height: 20,
                 ),
-                RecentProducts(),
+                const RecentProducts(),
+                const SizedBox(height: 10,),
               ],
             ),
           ),

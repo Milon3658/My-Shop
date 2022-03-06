@@ -62,7 +62,6 @@ class ProductDetails extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: Container(
               height: 60,
-              color: Colors.white,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
